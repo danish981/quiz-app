@@ -20,6 +20,22 @@
             <p class="card-footer text-muted">quiz date</p>
           </div>
         </div>
+        
+        <div class="card col-md-3 m-2 p-0"  >
+          <div class="card-body">
+            <h5 class="card-title">Quiz title</h5>
+            <p class="card-text">quiz text and notes</p>
+            <p class="card-footer text-muted">quiz date</p>
+          </div>
+        </div>
+
+        <div class="card col-md-3 m-2 p-0"  >
+          <div class="card-body">
+            <h5 class="card-title">Quiz title</h5>
+            <p class="card-text">quiz text and notes</p>
+            <p class="card-footer text-muted">quiz date</p>
+          </div>
+        </div>
     
       </div>
     </div>
