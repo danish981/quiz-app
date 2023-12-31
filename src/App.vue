@@ -1,7 +1,11 @@
 
 <script setup>
   import { ref } from 'vue';
-  import quizzes from './data/data.json';
+  import quizzesJson from './data/data.json';
+  const quizzes = ref(quizzesJson);
+
+  const search = ref('');
+  
 </script>
 
 <template>
@@ -9,7 +13,7 @@
     <div class="container mt-3">
       <header class="d-flex justify-content-between align-items-center">
         <h1>Quizzes</h1>
-        <input type="text" class="form-control ml-4 w-25" placeholder="search ...">
+        <input type="text" v-model.trim="search" class="form-control ml-4 w-25" placeholder="search ...">
       </header>
       <div class="row mt-4">
 
