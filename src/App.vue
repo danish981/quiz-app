@@ -2,7 +2,10 @@
 <script setup>
   import { ref, watch } from 'vue';
   import quizzesJson from './data/data.json';
+  import Card from './components/Card.vue';
+  
   const quizzes = ref(quizzesJson);
+
 
   const search = ref('');
 
@@ -25,13 +28,17 @@
       </header>
       <div class="row mt-4">
 
-        <div class="card col-md-3 m-2 p-0 pb-2 text-dark border-0" style="height: 15rem;" v-for="quiz in quizzes"  :key="quiz.id" >
+        <!-- <div class="card col-md-3 m-2 p-0 pb-2 text-dark border-0" style="height: 15rem;" v-for="quiz in quizzes"  :key="quiz.id" >
           <img :src="quiz.img" alt="the quiz image" style=" object-fit: cover;">
           <div class="card-body p-0 ml-3" >
             <p class="card-text font-weight-bold mt-2 mb-1">{{ quiz.name }}</p>
             <p class="card-text">{{ quiz.questions.length }} questions</p>
           </div>
-        </div>
+        </div> -->
+
+
+        <Card v-for="quiz in quizzes" :key="quiz.id" :quiz="quiz" />
+
       </div>
     </div>
   </main>
