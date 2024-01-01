@@ -1,11 +1,19 @@
 
 <script setup>
-  import { ref } from 'vue';
+  import { ref, watch } from 'vue';
   import quizzesJson from './data/data.json';
   const quizzes = ref(quizzesJson);
 
   const search = ref('');
-  
+
+  watch(search, () => {
+    if(search.value) {
+      quizzes.value = quizzes.value.filter(quiz => quiz.name.toLowerCase().includes(search.value.toLowerCase()));
+    } else {
+      quizzes.value = quizzesJson;
+    }
+  })
+
 </script>
 
 <template>
