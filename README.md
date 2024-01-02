@@ -29,5 +29,4 @@ npm run build
 ```
 
 
-
-*making components*
+**Passing data to vue-component**

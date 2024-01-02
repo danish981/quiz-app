@@ -1,21 +1,19 @@
-
 <script setup>
-  import { ref, watch } from 'vue';
-  import quizzesJson from './data/data.json';
-  import Card from './components/Card.vue';
-  
-  const quizzes = ref(quizzesJson);
+import {ref, watch} from 'vue';
+import quizzesJson from './data/data.json';
+import Card from './components/Card.vue';
 
+const quizzes = ref(quizzesJson);
 
-  const search = ref('');
+const search = ref('');
 
-  watch(search, () => {
-    if(search.value) {
-      quizzes.value = quizzes.value.filter(quiz => quiz.name.toLowerCase().includes(search.value.toLowerCase()));
-    } else {
-      quizzes.value = quizzesJson;
-    }
-  })
+watch(search, () => {
+  if (search.value) {
+    quizzes.value = quizzes.value.filter(quiz => quiz.name.toLowerCase().includes(search.value.toLowerCase()));
+  } else {
+    quizzes.value = quizzesJson;
+  }
+})
 
 </script>
 
@@ -37,7 +35,7 @@
         </div> -->
 
 
-        <Card v-for="quiz in quizzes" :key="quiz.id" :quiz="quiz" />
+        <Card v-for="quiz in quizzes" :key="quiz.id" :quiz="quiz"/>
 
       </div>
     </div>
@@ -45,7 +43,7 @@
 </template>
 
 
-<style scope>
+<style scoped>
 
 .show {
   display: flex;
