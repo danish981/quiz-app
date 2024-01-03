@@ -28,5 +28,4 @@ npm run dev
 npm run build
 ```
 
-
-**Passing data to vue-component**
+*6. pages and routing*

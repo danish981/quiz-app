@@ -1,6 +1,8 @@
 <script setup>
 
+// array style props
 const props = defineProps(['quiz'])
+
 
 </script>
 
