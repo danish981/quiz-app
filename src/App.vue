@@ -9,7 +9,18 @@ const search = ref('');
 
 watch(search, () => {
   if (search.value) {
-    quizzes.value = quizzes.value.filter(quiz => quiz.name.toLowerCase().includes(search.value.toLowerCase()));
+    
+    
+    // todo : a way to get the filtered quizzes, a way but
+    // quizzes.value = quizzes.value.filter(quiz => quiz.name.toLowerCase().includes(search.value.toLowerCase()));
+
+    // todo : another way I like to clearly showes what is going on
+    quizzes.value = quizzes.value.filter(function (quiz) {
+      return quiz.name.toLowerCase().includes(search.value.toLowerCase());
+    })
+
+
+
   } else {
     quizzes.value = quizzesJson;
   }
@@ -36,6 +47,8 @@ watch(search, () => {
 
 
         <Card v-for="quiz in quizzes" :key="quiz.id" :quiz="quiz" />
+
+
       </div>
     </div>
   </main>
