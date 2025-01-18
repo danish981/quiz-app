@@ -9,8 +9,6 @@ const search = ref('');
 
 watch(search, () => {
   if (search.value) {
-    
-    
     // todo : a way to get the filtered quizzes, a way but
     // quizzes.value = quizzes.value.filter(quiz => quiz.name.toLowerCase().includes(search.value.toLowerCase()));
 
@@ -18,8 +16,6 @@ watch(search, () => {
     quizzes.value = quizzes.value.filter(function (quiz) {
       return quiz.name.toLowerCase().includes(search.value.toLowerCase());
     })
-
-
 
   } else {
     quizzes.value = quizzesJson;
