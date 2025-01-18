@@ -1,5 +1,5 @@
 <script setup>
-import {ref, watch} from 'vue';
+import { ref, watch } from 'vue';
 import quizzesJson from './data/data.json';
 import Card from './components/Card.vue';
 
@@ -35,7 +35,7 @@ watch(search, () => {
         </div> -->
 
 
-        <Card v-for="quiz in quizzes" :key="quiz.id" :quiz="quiz"/>
+        <Card v-for="quiz in quizzes" :key="quiz.id" :quiz="quiz" />
       </div>
     </div>
   </main>
@@ -43,16 +43,7 @@ watch(search, () => {
 
 
 <style scoped>
-
 .show {
   display: flex;
 }
-
 </style>
-
-
-
-
-
-
-

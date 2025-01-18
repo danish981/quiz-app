@@ -3,14 +3,11 @@
 // array style props
 const props = defineProps(['quiz'])
 
-
 </script>
 
 <template>
   <div class="card col-md-3 m-2 p-0 pb-2 text-dark border-0" style="height: 15rem;">
-    <img :src="quiz.img"
-         alt="the quiz image"
-         style=" object-fit: cover;">
+    <img :src="quiz.img" alt="the quiz image" style=" object-fit: cover;">
     <div class="card-body p-0 ml-3">
       <p class="card-text font-weight-bold mt-2 mb-1">{{ props.quiz.name }}</p>
       <p class="card-text">{{ props.quiz.questions.length }} questions </p>
@@ -20,7 +17,6 @@ const props = defineProps(['quiz'])
 
 
 <style scoped>
-
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
